@@ -34,7 +34,7 @@ import Qt.labs.settings 1.0
 MuseScore {
 
 	menuPath: "Plugins.Erhu Notation"
-	version: "1.0.00"
+	version: "1.1.00"
 	description: qsTr("Erhu note names, fingering etc.")
 
 	// ********************************************************************************
@@ -264,10 +264,10 @@ MuseScore {
 
 				text.text =
 					"<span class=\"" + classNotation + "\">" +
-					"<font face=\"" + ( repeatAccidental.itemAt(0).checked ? "ErhuS" : "ErhuF" ) +
-					"\" size=\"" + valFontSize.value + "\">" +
+					"<font face=\"" + ( repeatAccidental.itemAt(0).checked ? "ErhuS" : "ErhuF" ) + "\">" +
+					"<font size=\"" + valFontSize.value + "\">" +
 					text.text +
-					"</font></span>"
+					"</font></font></span>"
 				text.pos.x = xPos
 				text.pos.y = yPos
 				cursor.add(text)
